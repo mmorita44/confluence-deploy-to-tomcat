@@ -1,0 +1,13 @@
+version: '2'
+services:
+  tomcat-confluence-deploy:
+    build: .
+    image: tomcat-confluence-deploy:5.10.5
+    ports:
+      - 8090:8090
+    volumes:
+      - data-confluence:/var/shdsd/application-data/confluence
+
+volumes:
+  data-confluence:
+    driver: local
